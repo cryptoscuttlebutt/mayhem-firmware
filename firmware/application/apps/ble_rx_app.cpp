@@ -709,6 +709,8 @@ void BLERxView::on_data(BlePacketData* packet) {
     str_console += " Mac:";
     str_console += to_string_mac_address(packet->macAddress, 6, false);
     str_console += " Data:";
+    str_console += " RSSI:";
+    str_console += packet->max_dB;
 
     int i;
 
